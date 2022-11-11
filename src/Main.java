@@ -45,15 +45,17 @@ public class Main {
         int mortality = 8;           // смертность
         int forQuantity = 1000;      // на количество - на тысячу
         int i = 0;                   // года от 1 до 10
+
+        int birthSpeedPerYear = population / forQuantity * birthRatePerYear;
+        int deathSpeedPerYear = population / forQuantity * mortality;
+        int resultSpeedPerYear = birthSpeedPerYear - deathSpeedPerYear;
         while (i < 10) {
-            i = i + 1;
-            population = population + population / forQuantity * birthRatePerYear - population / forQuantity * mortality;
+            i = i +1;
+            population = population + resultSpeedPerYear;
             System.out.println("Год " + i + " , численность населения составляет  " + population);
-            // 0 < 10
+        }
+             // 0 < 10
             // 12_000_000 + 12_000_000 / 1_000 * 17 - 12_000_000 / 1_000 * 8
         }
 
-
-
     }
-}
