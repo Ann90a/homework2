@@ -48,7 +48,7 @@ public class Main {
         while (i < 10) {
             i = i + 1;
             population = population + population / forQuantity * birthRatePerYear - population / forQuantity * mortality;
-            System.out.println(i + " " + population);
+            System.out.println("Год " + i + " , численность населения составляет  " + population);
             // 0 < 10
             // 12_000_000 + 12_000_000 / 1_000 * 17 - 12_000_000 / 1_000 * 8
         }
