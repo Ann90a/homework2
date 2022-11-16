@@ -30,11 +30,23 @@ public class Main {
         for (a = 10; a > 0; a--) {
             System.out.print(a + " ");
         }
+        System.out.println();
 
 
+        // задание 3. полностью измененное, не смогла поменять в предыдущем
 
+        int population1 = 12_000_000;
+        int birthRatePerYear1 = 17;
+        int mortality1 = 8;
+        int difference1 = birthRatePerYear1 - mortality1;
+        int forQuantity1 = 1000;
+        int i = 0;
+        while (i < 10) {
+            i = i + 1;
+            population1 += population1 * difference1 / forQuantity1;
+            System.out.println("Год " + i + " численность населения составляет " + population1);
 
-
+        }
 
     }
 }
